@@ -5,6 +5,7 @@ clock.js
 * Makes time useful.
 * Clock uses setTimeout but is self correcting.
 * Count down? Count up! Clock no care, but count down preferred.
+* DOES NOT FIDDLE WITH THE DOM. Display time however you want.
 
 Written with ♥ in [vanilla.js](http://vanilla-js.com/).
 
