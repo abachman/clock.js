@@ -8,6 +8,8 @@ clock.js
 
 Written with ♥ in [vanilla.js](http://vanilla-js.com/).
 
+![vanilla button](http://vanilla-js.com/assets/button.png)
+
 Usage
 -----
 
