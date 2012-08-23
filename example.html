@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        font-size: 16px;
+        color: #404040;
+        background: black;
+      }
+      h1 {
+        margin: 0 0 16px;
+      }
+      .content {
+        width: 600px;
+        margin: 45px auto 0;
+        padding: 16px;
+        background: white;
+      }
+      #countdown {
+        font-size: 32px;
+        cursor: pointer;
+      }
+    </style>
+
+    <script src='clock.js'></script>
+    <script>
+      function onLoad () {
+        var display = document.getElementById('countdown');
+
+        var showTime = function (c) {
+          // display time with leading zeros
+          display.innerText = c.zeroPadded.hours + ':' +
+            c.zeroPadded.minutes + ':' +
+            c.zeroPadded.seconds;
+        }
+
+        var clock = new Clock({
+            tick: function (clock) {
+              // ticks happen 5 times per second.
+            },
+            second: function (clock) {
+              showTime(clock);
+            },
+            finish: function (clock) {
+              // SOUND THE ALARM!
+              display.innerText = 'TIME IS UP!';
+            }
+        });
+
+        // count down from 100 seconds
+        clock.start(0, 0, 100);
+
+        // clicking timer pauses countdown
+        display.addEventListener('click', function () {
+          console.log('click!');
+          if (clock.running) {
+            clock.pause();
+            display.innerText = 'PAUSED';
+          } else {
+            clock.unpause();
+            showTime(clock);
+          }
+        }, false);
+      }
+
+    </script>
+  </head>
+
+  <body onload='onLoad()'>
+    <div class='content'>
+      <h1>THIS IS CLOCK.</h1>
+      <span id='countdown'></span>
+    </div>
+  </body>
+</html>
+
