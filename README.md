@@ -4,7 +4,7 @@ clock.js
 * Clock counts time.
 * Makes time useful.
 * Clock uses setTimeout but is self correcting.
-* Count down? Count up! Clock no care, but count down preferred.
+* Count down? Count up! Clock doesn't care, but count down is preferred.
 * DOES NOT FIDDLE WITH THE DOM. Display time however you want.
 
 Written with ♥ in [vanilla.js](http://vanilla-js.com/).
