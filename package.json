@@ -1,0 +1,11 @@
+{
+  "name": "clock.js",
+  "description": "A clock engine for building clocks in webpages.",
+  "author": "Adam Bachman <adam.bachman@gmail.com>",
+  "scripts": {
+    "build": "echo '// https://github.com/abachman/clock.js' > clock.min.js ; uglifyjs clock.js -m >> clock.min.js"
+  },
+  "devDependencies": {
+    "uglify-js": "~2.4.4"
+  }
+}
